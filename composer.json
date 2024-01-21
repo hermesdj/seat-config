@@ -16,7 +16,7 @@
   "require": {
     "eveseat/services": "^5"
   },
-  "licence": "GPL-3.0-or-later",
+  "license": "GPL-3.0-or-later",
   "minimum-stability": "dev",
   "prefer-stable": true,
   "extra": {
