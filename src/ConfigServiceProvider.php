@@ -9,9 +9,10 @@ class ConfigServiceProvider extends AbstractSeatPlugin
 
     public function boot()
     {
-        $this->mergeConfigFrom(
-            __DIR__ . '/Config/eseye-cache.php', 'eseye-cache'
-        );
+        $this->mergeConfigFrom($config = __DIR__ . '/Config/eseye-cache.php', 'cache.stores');
+        if ($this->app->runningInConsole()) {
+            $this->publishes([$config => config_path('eseye-cache.php')], ['seat', 'eseye', 'config']);
+        }
     }
 
     public function getName(): string
