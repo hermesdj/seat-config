@@ -1,0 +1,29 @@
+{
+  "name": "hermesdj/seat-config",
+  "description": "Plugin used to overwrite seat configs that are not configurable using env variables",
+  "type": "seat-plugin",
+  "autoload": {
+    "psr-4": {
+      "Seat\\HermesDj\\Config\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Jay's",
+      "email": "jays.gaming.contact@gmail.com"
+    }
+  ],
+  "require": {
+    "eveseat/services": "^5"
+  },
+  "licence": "GPL-3.0-or-later",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Seat\\HermesDj\\Config\\ConfigServiceProvider"
+      ]
+    }
+  }
+}
